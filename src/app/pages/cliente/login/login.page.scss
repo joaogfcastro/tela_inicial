@@ -1,0 +1,158 @@
+/* ==== CABEÇALHO ==== */
+ion-header {
+  &::after {
+    display: none;
+  }
+}
+ion-toolbar {
+  --background: transparent;
+  --border-width: 0;
+  --color: #fff;
+}
+ion-buttons[slot="start"] {
+  ion-button {
+    --padding-start: 8px;
+    --padding-end: 16px;
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: 500;
+
+    ion-icon {
+      font-size: 1.5rem;
+      margin-right: 4px;
+    }
+  }
+}
+
+// NOVO: Estilo para o botão de voltar
+ion-buttons[slot="start"] {
+  ion-button {
+    --background: rgba(255, 255, 255, 0.1); // Fundo branco com 10% de opacidade
+    --border-radius: 50%;                     // Deixa o fundo redondo
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+      --background: rgba(255, 255, 255, 0.2); // Fica um pouco mais claro no hover
+    }
+
+    ion-icon {
+      font-size: 1.4rem; // Ajusta o tamanho do ícone se necessário
+    }
+  }
+}
+
+ion-title {
+  font-weight: 600;
+}
+
+
+.background-image {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: url('src/assets/imagens/hero-image.jpg') no-repeat center center/cover;
+  filter: blur(6px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.login-wrapper,
+.signup-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    .highlight {
+      color: #ffd700;
+    }
+  }
+
+  p {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* Inputs minimalistas */
+.form-list {
+  width: 100%;
+  max-width: 330px;
+
+  ion-item {
+    --background: transparent;
+    --inner-border-width: 0 0 1px 0;
+    --border-color: rgba(255,255,255,0.3);
+    --highlight-color-focused: #ffd700;
+    margin-bottom: 18px;
+  }
+
+  ion-label { color: #ccc; }
+  ion-input { color: #fff; }
+}
+
+/* Botões */
+.login-button, .signup-button {
+  --background: linear-gradient(to right, #4c5dff, #00c6ff);
+  --border-radius: 50px;
+  height: 50px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.forgot-password-link {
+  width: 100%; max-width: 330px;
+  text-align: right;
+  margin-bottom: 15px;
+
+  a { color: #ffd700; font-size: 0.85rem; text-decoration: none; }
+}
+
+/* Link "Cadastre-se" */
+.signup-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+
+  p {
+    color: #ccc;
+  }
+
+  /*
+   *  Regra específica para o ion-router-link DENTRO do signup-link.
+   *  Isso garante que a regra seja aplicada com prioridade.
+  */
+  ion-router-link {
+    color: #ffd700 !important; // A cor amarela (com !important para forçar)
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Efeito de hover */
+  ion-router-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
