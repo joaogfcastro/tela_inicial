@@ -1,0 +1,7 @@
+{
+  "name": "tela_inicial",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
