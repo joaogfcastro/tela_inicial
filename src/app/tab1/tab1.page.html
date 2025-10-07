@@ -1,17 +1,116 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="hero-section">
+    <div class="hero-content">
+      <div class="top-tag">
+        <ion-icon name="sparkles-outline"></ion-icon>
+        <span>Conectando profissionais e clientes</span>
+      </div>
+
+      <h1>Encontre o <span class="highlight-text">profissional</span><br>certo perto de você</h1>
+      <p>A plataforma que conecta trabalhadores autônomos e clientes de forma rápida, segura e transparente. Serviços de qualidade a poucos cliques de distância.</p>
+
+      <div class="actions">
+        <ion-button shape="round" class="find-btn">Encontrar Profissionais</ion-button>
+        <ion-button shape="round" fill="solid" class="register-btn">Cadastrar como Profissional</ion-button>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <h2>1200+</h2>
+          <p>Profissionais</p>
+        </div>
+        <div class="stat-item">
+          <h2>25k+</h2>
+          <p>Serviços Realizados</p>
+        </div>
+        <div class="stat-item">
+          <h2>4.8★</h2>
+          <p>Avaliação Média</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <div class="section-header">
+      <h2>Serviços Disponíveis</h2>
+      <p>Encontre profissionais qualificados em diversas áreas</p>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="6" size-lg="4" *ngFor="let service of availableServices">
+          <ion-card class="feature-card">
+            <fa-icon [icon]="service.icon" size="3x" class="card-icon"></fa-icon>
+            <ion-card-header>
+              <ion-card-title>{{ service.name }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <a href="#">{{ service.count }}+ profissionais</a>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="section-container">
+    <div class="section-header">
+      <h2>Por que escolher nossa plataforma?</h2>
+      <p>Tecnologia e segurança para conectar você aos melhores profissionais</p>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="6" size-lg="4" *ngFor="let feature of platformFeatures">
+          <ion-card class="feature-card">
+            <div class="icon-background">
+              <fa-icon [icon]="feature.icon" size="2x"></fa-icon>
+            </div>
+            <ion-card-header>
+              <ion-card-title>{{ feature.title }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              {{ feature.description }}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+  <div class="section-container">
+    <div class="section-header">
+      <h2>Experimente o App</h2>
+      <p>Navegue pelas funcionalidades principais do aplicativo</p>
+    </div>
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-md="6" size-lg="5" *ngFor="let appFeature of appFeatures">
+          <ion-card class="feature-card">
+            <fa-icon [icon]="appFeature.icon" size="3x" class="card-icon"></fa-icon>
+            <ion-card-header>
+              <ion-card-title>{{ appFeature.title }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{ appFeature.description }}</p>
+              <ion-button fill="outline" shape="round">{{ appFeature.buttonText }}</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <footer class="footer-section">
+    <h3>ServiceApp</h3>
+    <p>Conectando trabalhadores autônomos e clientes de forma inteligente</p>
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a>
+      <span>•</span>
+      <a href="#">Privacidade</a>
+      <span>•</span>
+      <a href="#">Suporte</a>
+    </div>
+  </footer>
+
 </ion-content>
