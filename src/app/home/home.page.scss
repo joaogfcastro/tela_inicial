@@ -1,0 +1,69 @@
+.home-page {
+  --background: url('src/assets/imagens/hero-image.jpg') no-repeat center center/cover;
+  position: relative;
+
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+  }
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    line-height: 1.2;
+
+    .highlight {
+      color: #ffd700;
+    }
+  }
+
+  p {
+    margin-top: 10px;
+    max-width: 350px;
+    color: #e0e0e0;
+  }
+}
+
+.buttons-container {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .gradient-button {
+    --background: linear-gradient(to right, #4c5dff, #00c6ff); // azul
+    --border-radius: 50px;
+    height: 50px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .bordered-button {
+    --background: transparent;
+    --border-color: #fff;
+    --border-width: 2px;
+    --color: #fff;
+    --border-radius: 50px;
+    height: 50px;
+    font-weight: bold;
+  }
+}

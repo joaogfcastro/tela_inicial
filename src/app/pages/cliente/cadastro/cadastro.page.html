@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- Botão "Voltar" com seta para a Home -->
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="cadastro-page">
+  <div class="background-image"></div>
+  <div class="background-overlay"></div>
+
+  <div class="signup-wrapper">
+    <h1>Cadastro de <span class="highlight">Cliente</span></h1>
+    <p>Crie sua conta para começar a usar a plataforma</p>
+
+    <ion-list class="form-list" lines="none">
+      <ion-item>
+        <ion-label position="floating">Nome completo</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Confirmar senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" class="signup-button">Cadastrar</ion-button>
+
+    <div class="login-link">
+      <p>Já possui conta?
+        <ion-router-link routerLink="/cliente/login">Entrar</ion-router-link>
+      </p>
+    </div>
+  </div>
+</ion-content>

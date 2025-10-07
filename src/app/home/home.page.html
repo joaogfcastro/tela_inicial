@@ -1,0 +1,34 @@
+<ion-content [fullscreen]="true" class="home-page">
+  <div class="background-overlay"></div>
+  <div class="content-wrapper">
+
+    <div class="tag-label">
+      Conectando profissionais e clientes
+    </div>
+
+    <h1 class="ion-text-center">
+      Encontre o <br>
+      <span class="highlight">profissional</span><br>
+      certo perto de você
+    </h1>
+
+    <p class="ion-text-center">
+      A plataforma que conecta trabalhadores autônomos e clientes de forma rápida,
+      segura e transparente. Serviços de qualidade a poucos cliques de distância.
+    </p>
+
+    <div class="buttons-container">
+  <!-- Cliente -->
+  <ion-button expand="block" class="gradient-button" (click)="openClienteOptions()">
+    Sou Cliente
+  </ion-button>
+
+  <!-- Funcionário -->
+  <ion-button expand="block" class="gradient-button" (click)="openFuncionarioOptions()">
+    Sou Profissional
+  </ion-button>
+</div>
+
+
+  </div>
+</ion-content>

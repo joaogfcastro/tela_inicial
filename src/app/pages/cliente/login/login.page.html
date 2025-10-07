@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- Botão "Voltar" com seta para a Home -->
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="login-page">
+  <div class="background-image"></div>
+  <div class="background-overlay"></div>
+
+  <div class="login-wrapper">
+    <h1><span class="highlight">Login</span> Cliente</h1>
+    <p>Entre para encontrar profissionais perto de você</p>
+
+    <ion-list class="form-list" lines="none">
+      <ion-item>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="forgot-password-link">
+      <a href="#">Esqueceu sua senha?</a>
+    </div>
+
+    <ion-button expand="block" class="login-button">Entrar</ion-button>
+
+    <div class="signup-link">
+      <p>Ainda não tem conta?
+        <ion-router-link routerLink="/cliente/cadastro">Cadastre-se</ion-router-link>
+      </p>
+    </div>
+  </div>
+</ion-content>
